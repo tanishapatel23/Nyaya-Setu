@@ -1,0 +1,43 @@
+NyaySetu test run
+date fixed at 2026-11-10, offline model
+
+01_deposit_two_turns               9/9
+02_refund_all_facts                9/9
+03_salary_notice_period_trap       8/8
+04_received_notice                 9/9
+05_deposit_hindi                   8/8
+06_refund_hinglish                 8/8
+07_vague_then_clarified            8/8
+08_violence_flag                   7/7
+09_no_false_alarm                  7/7
+10_amount_above_district           7/7
+11_time_barred                     8/8
+12_cheque_notice                   6/6
+13_criminal_and_court              3/3
+14_skips_question                  7/7
+15_new_fact_after_answer           9/9
+16_notice_hindi                    8/8
+17_guard_poison                    2/2
+18_boss_has_not_paid               8/8
+19_sending_not_receiving_notice    7/7
+20_cyber_fraud_goes_elsewhere      4/4
+21_something_else_then_deposit     8/8
+22_new_problem_mid_case            7/7
+23_questions_after_answer          7/7
+24_corrections                     8/8
+25_off_topic_after_answer          7/7
+26_notice_pdf_attached             10/10
+27_notice_photo_and_agreement      8/8
+28_invoice_attached                7/7
+29_notice_pasted_as_text           6/6
+30_hinglish_salary_months          6/6
+31_detours_while_answering_questions 9/9
+32_statement_is_not_a_question     6/6
+33_plain_notes_file                8/8
+34_unreadable_file                 6/6
+35_employer_notice_pdf             12/12
+36_employer_notice_photo           10/10
+practice scoring                   1/1
+calendar, sharing, save and reopen 10/10
+
+checks passed: 278/278

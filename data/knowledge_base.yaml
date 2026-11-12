@@ -1,0 +1,559 @@
+# NyaySetu knowledge base.
+#
+# Every legal statement the app makes comes from this file. The model can
+# rephrase it but not add to it: core/guard.py strips any section or Act that
+# is not listed here. Each fact has a source_note so a lawyer can re-check it.
+# Last checked by hand on 2026-11-10.
+
+meta:
+  last_verified: "2026-11-10"
+  disclaimer:
+    en: >-
+      NyaySetu gives general legal information, not legal advice. It is not
+      a lawyer. For anything serious, urgent or already in court, talk to an
+      advocate. Free legal aid is available on the NALSA helpline 15100.
+    hi: >-
+      न्यायसेतु सामान्य कानूनी जानकारी देता है, कानूनी सलाह नहीं। यह वकील नहीं है।
+      गंभीर, जल्दी वाले या अदालत में चल रहे मामले में किसी वकील से बात करें।
+      मुफ़्त कानूनी सहायता के लिए NALSA हेल्पलाइन 15100 पर कॉल करें।
+
+helplines:
+  - id: nalsa
+    name: {en: "NALSA free legal aid", hi: "NALSA मुफ़्त कानूनी सहायता"}
+    contact: "15100"
+    what:
+      en: Free advice from a panel lawyer, and help applying for a free lawyer.
+      hi: पैनल वकील से मुफ़्त सलाह, और मुफ़्त वकील के लिए आवेदन में मदद।
+    for: [deposit, refund, salary, notice]
+  - id: nch
+    name: {en: "National Consumer Helpline", hi: "राष्ट्रीय उपभोक्ता हेल्पलाइन"}
+    contact: "1915 or 1800-11-4000, WhatsApp 8800001915, consumerhelpline.gov.in"
+    what:
+      en: Free complaint before going to court. The company is contacted for you, and many cases settle here.
+      hi: अदालत से पहले मुफ़्त शिकायत। कंपनी से आपकी ओर से संपर्क किया जाता है और कई मामले यहीं सुलझ जाते हैं।
+    for: [refund]
+  - id: edaakhil
+    name: {en: "e-Daakhil", hi: "ई-दाखिल"}
+    contact: "edaakhil.nic.in"
+    what:
+      en: File a consumer complaint online yourself and track it.
+      hi: उपभोक्ता शिकायत ख़ुद ऑनलाइन दर्ज करें और उसकी स्थिति देखें।
+    for: [refund]
+  - id: samadhan
+    name: {en: "SAMADHAN labour portal", hi: "समाधान श्रम पोर्टल"}
+    contact: "samadhan.labour.gov.in"
+    what:
+      en: File a wage claim with the labour department online and track it.
+      hi: वेतन का दावा श्रम विभाग में ऑनलाइन दर्ज करें और उसकी स्थिति देखें।
+    for: [salary]
+
+problem_types:
+  # strong words count 3, weak words count 1. English, Hindi and Hinglish.
+  - id: deposit
+    label: {en: "Security deposit not returned", hi: "सिक्योरिटी डिपॉज़िट वापस नहीं मिला"}
+    limitation_days: 1095
+    limitation_label: {en: "file a recovery case", hi: "वसूली का केस दायर करने"}
+    strong: [deposit, security deposit, landlord, landlady, house owner, flat owner, rent agreement,
+             leave and licence, tenant, tenancy, makaan malik, makan malik, maalik, kirayedar,
+             डिपॉज़िट, डिपॉजिट, मकान मालिक, किरायेदार, जमा राशि]
+    weak: [rent, rented, flat, room, pg, hostel, vacate, vacated, moved out, shifted out, lease,
+           owner, apartment, house, kiraya, ghar khali, किराया, मकान, फ्लैट, कमरा]
+  - id: refund
+    label: {en: "Refund, defective product or bad service", hi: "रिफंड, ख़राब सामान या ख़राब सेवा"}
+    limitation_days: 730
+    limitation_label: {en: "file a consumer complaint", hi: "उपभोक्ता शिकायत दर्ज करने"}
+    strong: [refund, refunded, defective, replacement, money back, not delivered, never delivered,
+             damaged product, faulty, paisa wapas, paise wapas, रिफंड, ख़राब सामान, खराब सामान]
+    weak: [order, ordered, seller, delivery, phone, mobile, laptop, tv, fridge, washing machine, ac, earphones, delivered, product, item, warranty, guarantee,
+           service center, service centre, repair, broken, damaged, fake, amazon, flipkart, myntra,
+           meesho, ajio, nykaa, swiggy, zomato, booking, flight, airline, hotel, cancelled,
+           cancellation, online, shop, shopkeeper, bought, purchased, courier, kharab, saman,
+           dukaan, return, ख़राब, खराब, ऑर्डर, सामान, दुकान, दुकानदार, वापसी, सेवा]
+  - id: salary
+    label: {en: "Salary or final settlement not paid", hi: "तनख़्वाह या फुल एंड फाइनल नहीं मिला"}
+    limitation_days: 1095
+    limitation_label: {en: "file a wage claim", hi: "वेतन का दावा दर्ज करने"}
+    strong: [salary, salaries, wages, wage, stipend, full and final, fnf, payslip, salary slip,
+             unpaid salary, tankhwah, tankha, vetan, तनख्वाह, तनख़्वाह, वेतन, सैलरी, पगार]
+    weak: [employer, company, boss, manager, hr, office, job, quit, resigned, resign, resignation,
+           terminated, fired, laid off, layoff, noticeperiod, relieving letter, experience letter,
+           offer letter, appraisal, incentive, bonus, intern, internship, dues, paid me, pay me,
+           not paid, hasn't paid, hasnt paid, haven't been paid, havent been paid, not been paid,
+           naukri, company ne, boss ne, नौकरी, कंपनी, इस्तीफा, बकाया, बॉस]
+  - id: notice
+    label: {en: "Received a legal notice", hi: "कानूनी नोटिस मिला है"}
+    limitation_days: null
+    strong: [legal notice, lawyer's notice, advocate notice, notice aaya, notice mila, कानूनी नोटिस]
+    weak: [notice, advocate, lawyer, vakil, demand letter, reply, नोटिस, वकील, जवाब]
+
+# Problems this tool does not handle, with where to go instead. Checked when
+# nothing in scope matches. Triggers are regular expressions on lowercased text.
+elsewhere:
+  - id: cyber
+    triggers: ['\b(otp|kyc|phishing|hacked|digital arrest)\b', '\b(online|upi|bank|cyber)\s+(fraud|scam)', '\bscam(med)?\b', 'fake (\w+ )?(call|link|app|website)', '(took|stole|deducted|debited|withdrew) .{0,30}from my (bank )?(account|card|wallet)']
+    message:
+      en: >-
+        This sounds like cyber fraud, which needs the police rather than a letter. Call 1930
+        straight away, because money can sometimes be frozen if it is reported quickly, then
+        file a complaint on cybercrime.gov.in and tell your bank.
+      hi: >-
+        यह साइबर धोखाधड़ी लगती है, जिसमें चिट्ठी नहीं, पुलिस की ज़रूरत है। तुरंत 1930 पर कॉल करें,
+        क्योंकि जल्दी शिकायत करने पर कई बार पैसा रोका जा सकता है। फिर cybercrime.gov.in पर शिकायत
+        दर्ज करें और अपने बैंक को बताएँ।
+  - id: women
+    triggers: ['domestic violence', 'dowry', 'husband (hits|beats|beat|slapped|hit)', 'in-?laws (beat|hit|harass)', 'sexual harassment', 'molest', 'दहेज', 'घरेलू हिंसा']
+    message:
+      en: >-
+        I am sorry this is happening. For violence or harassment, the Women Helpline 181 works
+        24 hours and can connect you to police, legal help and a safe place. If you are in danger
+        right now, call 112.
+      hi: >-
+        मुझे अफ़सोस है कि आपके साथ ऐसा हो रहा है। हिंसा या उत्पीड़न के लिए महिला हेल्पलाइन 181 चौबीसों
+        घंटे काम करती है और पुलिस, कानूनी मदद और सुरक्षित जगह से जोड़ सकती है। अभी ख़तरे में हों तो 112
+        पर कॉल करें।
+  - id: family
+    triggers: ['\b(divorce|custody|alimony|talaq|separation)\b', '\bmaintenance (case|from|for my)', 'तलाक', 'गुज़ारा भत्ता']
+    message:
+      en: >-
+        Family matters like divorce, custody or maintenance need a family lawyer, which this tool
+        does not cover. NALSA's free helpline 15100 can connect you to a lawyer at no cost if you
+        qualify.
+      hi: >-
+        तलाक, बच्चों की कस्टडी या गुज़ारा भत्ता जैसे पारिवारिक मामलों के लिए फ़ैमिली वकील चाहिए, जो यह
+        टूल नहीं संभालता। NALSA की मुफ़्त हेल्पलाइन 15100 योग्य होने पर मुफ़्त वकील दिला सकती है।
+  - id: property
+    triggers: ['\b(land|plot|property) (dispute|grab|grabbed)', 'encroach', 'inheritance', 'ancestral', 'partition', 'mutation', 'ज़मीन', 'जमीन', 'जायदाद']
+    message:
+      en: >-
+        Land and property disputes depend heavily on documents and State rules, and this tool does
+        not cover them. Please speak to a lawyer; NALSA's free helpline 15100 can help you find one.
+      hi: >-
+        ज़मीन और जायदाद के विवाद काग़ज़ों और राज्य के नियमों पर बहुत निर्भर करते हैं, और यह टूल इन्हें नहीं
+        संभालता। किसी वकील से बात करें; NALSA की मुफ़्त हेल्पलाइन 15100 वकील ढूँढने में मदद कर सकती है।
+  - id: bank
+    triggers: ['\b(loan|emi|recovery agent|cibil|sarfaesi)\b', 'credit card (bill|dues|payment)', 'bank notice']
+    message:
+      en: >-
+        Loan and bank recovery matters are not covered here. Do not ignore letters from a bank.
+        Write to the bank, and if your complaint is not resolved, you can complain on the RBI's
+        portal at cms.rbi.org.in. For legal advice, call NALSA on 15100.
+      hi: >-
+        लोन और बैंक वसूली के मामले यहाँ शामिल नहीं हैं। बैंक की चिट्ठी को नज़रअंदाज़ न करें। बैंक को लिखित
+        में शिकायत करें, और हल न हो तो RBI के पोर्टल cms.rbi.org.in पर शिकायत कर सकते हैं। कानूनी सलाह के
+        लिए NALSA 15100 पर कॉल करें।
+  - id: insurance
+    triggers: ['insurance (claim|company|rejected)', 'claim rejected', 'medical negligence', 'hospital (bill|negligence|refused)']
+    message:
+      en: >-
+        Insurance and hospital disputes can often go to the consumer commission, but they need
+        advice on your specific policy or treatment, which this tool does not cover yet. Start
+        with the consumer helpline 1915, and call NALSA on 15100 for free legal advice.
+      hi: >-
+        बीमा और अस्पताल के विवाद अक्सर उपभोक्ता आयोग में जा सकते हैं, पर इनमें आपकी पॉलिसी या इलाज के
+        हिसाब से सलाह चाहिए, जो यह टूल अभी नहीं देता। उपभोक्ता हेल्पलाइन 1915 से शुरू करें, और मुफ़्त
+        कानूनी सलाह के लिए NALSA 15100 पर कॉल करें।
+
+# ---------------------------------------------------------------------------
+facts:
+
+  - id: DEP-1
+    problem_type: deposit
+    statute: "Model Tenancy Act, 2021"
+    section: "Section 11"
+    title:
+      en: The deposit has to come back once you hand over the house
+      hi: मकान सौंपने के बाद डिपॉज़िट लौटाना होता है
+    plain:
+      en: >-
+        A security deposit is your money. The landlord can keep part of it only
+        for unpaid rent or for damage beyond normal wear and tear, and he should
+        be able to show what he deducted and why. Once you vacate and hand back
+        the keys, the rest is due to you. The Model Tenancy Act also caps the
+        deposit for a home at two months' rent.
+      hi: >-
+        सिक्योरिटी डिपॉज़िट आपका पैसा है। मकान मालिक इसमें से सिर्फ़ बकाया किराया या
+        सामान्य घिसावट से ज़्यादा हुए नुकसान का पैसा काट सकता है, और उसे बताना चाहिए
+        कि क्या काटा और क्यों। मकान खाली करके चाबी लौटाने के बाद बाकी पैसा आपका है।
+        मॉडल टेनेंसी एक्ट में घर का डिपॉज़िट दो महीने के किराए तक सीमित है।
+    source_note: >-
+      Model Tenancy Act 2021, Section 11: deposit capped at two months' rent for
+      residential premises, refundable on handover after lawful deductions. A
+      model law that each State adopts or adapts, so the forum varies by State.
+
+  - id: DEP-2
+    problem_type: deposit
+    statute: "Model Tenancy Act, 2021"
+    section: "Rent Authority and Rent Court"
+    title:
+      en: Start with a written demand, then go to the Rent Authority or a civil court
+      hi: पहले लिखित माँग, फिर रेंट अथॉरिटी या सिविल कोर्ट
+    plain:
+      en: >-
+        A written demand with a clear deadline, usually 15 days, settles a lot of
+        these cases and makes the later case stronger. If your State has set up
+        a Rent Authority under the Model Tenancy Act, that is where the dispute
+        goes. If not, you file a civil suit to recover the money. A consumer
+        commission usually will not hear a deposit dispute.
+      hi: >-
+        साफ़ समय सीमा (आमतौर पर 15 दिन) वाली लिखित माँग से कई मामले सुलझ जाते हैं और
+        आगे का केस भी मज़बूत होता है। अगर आपके राज्य में मॉडल टेनेंसी एक्ट के तहत रेंट
+        अथॉरिटी है तो मामला वहाँ जाता है, नहीं तो पैसे की वसूली के लिए सिविल केस होता है।
+        उपभोक्ता आयोग आमतौर पर डिपॉज़िट का मामला नहीं सुनता।
+    source_note: >-
+      Model Tenancy Act 2021 sets up Rent Authorities and Rent Courts. Where the
+      Act is not in force, recovery is an ordinary civil suit, generally within
+      three years under the Limitation Act, 1963.
+
+  - id: REF-1
+    problem_type: refund
+    statute: "Consumer Protection Act, 2019"
+    section: "Section 2(10) and Section 2(11)"
+    title:
+      en: A faulty product or a poor service is a consumer complaint
+      hi: ख़राब सामान या ख़राब सेवा पर उपभोक्ता शिकायत बनती है
+    plain:
+      en: >-
+        If you paid for something and it arrived broken, stopped working, never
+        arrived, or the service fell well short of what was promised, the law
+        calls that a defect or a deficiency in service. You are a consumer and
+        you can claim a refund, a replacement and compensation.
+      hi: >-
+        अगर आपने पैसे दिए और सामान टूटा हुआ आया, काम करना बंद कर दिया, आया ही नहीं, या
+        सेवा वादे से काफ़ी कम रही, तो कानून में इसे दोष या सेवा में कमी कहते हैं। आप
+        उपभोक्ता हैं और रिफंड, बदला हुआ सामान और मुआवज़ा माँग सकते हैं।
+    source_note: >-
+      Consumer Protection Act 2019, Section 2(10) defines defect and Section
+      2(11) defines deficiency.
+
+  - id: REF-2
+    problem_type: refund
+    statute: "Consumer Protection Act, 2019"
+    section: "Section 34 and Section 35"
+    title:
+      en: Complain free on the consumer helpline, then file online if needed
+      hi: पहले उपभोक्ता हेल्पलाइन पर मुफ़्त शिकायत, ज़रूरत हो तो ऑनलाइन केस
+    plain:
+      en: >-
+        The National Consumer Helpline takes your complaint for free and contacts
+        the company, and plenty of refunds come through at that stage. If that
+        fails, you can file a complaint before the District Consumer Commission
+        yourself, online on e-Daakhil, without a lawyer. The District Commission
+        hears cases where you paid up to fifty lakh rupees.
+      hi: >-
+        राष्ट्रीय उपभोक्ता हेल्पलाइन मुफ़्त में शिकायत लेती है और कंपनी से बात करती है,
+        और कई रिफंड इसी चरण पर मिल जाते हैं। अगर बात न बने तो आप ज़िला उपभोक्ता आयोग में
+        ख़ुद, ई-दाखिल पर ऑनलाइन, बिना वकील के शिकायत कर सकते हैं। ज़िला आयोग पचास लाख
+        रुपये तक के मामले सुनता है।
+    source_note: >-
+      District jurisdiction Section 34, filing Section 35. Pecuniary limits from
+      the Consumer Protection (Jurisdiction) Rules 2021: District up to Rs 50
+      lakh. NCH and e-Daakhil details from consumerhelpline.gov.in and NIC.
+
+  - id: REF-3
+    problem_type: refund
+    statute: "Consumer Protection Act, 2019"
+    section: "Section 69"
+    title:
+      en: You have two years from the problem to file
+      hi: समस्या के दो साल के अंदर शिकायत करनी होती है
+    plain:
+      en: >-
+        A consumer complaint should be filed within two years of the date the
+        problem arose. After that the commission can still allow it, but only if
+        you show a good reason for the delay, and it may say no.
+      hi: >-
+        उपभोक्ता शिकायत समस्या शुरू होने की तारीख़ से दो साल के अंदर दर्ज करनी चाहिए।
+        उसके बाद आयोग देरी का ठीक कारण बताने पर ही शिकायत ले सकता है, और मना भी कर
+        सकता है।
+    source_note: >-
+      Consumer Protection Act 2019, Section 69(1) two years, Section 69(2)
+      condonation of delay for sufficient cause.
+
+  - id: SAL-1
+    problem_type: salary
+    statute: "Code on Wages, 2019"
+    section: "Section 17"
+    title:
+      en: Wages you have earned cannot be held back
+      hi: कमाया हुआ वेतन रोका नहीं जा सकता
+    plain:
+      en: >-
+        Salary for days you already worked is yours. The Code on Wages fixes
+        when wages must be paid, and an employer cannot sit on earned wages
+        because of a pending clearance or a disagreement about handover. At most
+        they can adjust what your contract actually allows, such as a notice
+        period shortfall, and they should show you the calculation.
+      hi: >-
+        जिन दिनों आपने काम किया, उनका वेतन आपका है। वेतन संहिता तय करती है कि वेतन कब
+        देना है, और कंपनी क्लीयरेंस या हैंडओवर के झगड़े के नाम पर कमाया हुआ वेतन नहीं
+        रोक सकती। ज़्यादा से ज़्यादा वह आपके कॉन्ट्रैक्ट के हिसाब से कटौती कर सकती है, जैसे
+        नोटिस पीरियड की कमी, और उसे हिसाब दिखाना चाहिए।
+    source_note: >-
+      Code on Wages 2019, Section 17, time limit for payment of wages.
+
+  - id: SAL-2
+    problem_type: salary
+    statute: "Code on Wages, 2019"
+    section: "Section 45"
+    title:
+      en: You can file a wage claim within three years
+      hi: तीन साल के अंदर वेतन का दावा कर सकते हैं
+    plain:
+      en: >-
+        If a written demand does not work, you can file a claim with the labour
+        authority instead of going to a civil court, online through the SAMADHAN
+        portal or at the Labour Commissioner's office. The claim can be filed
+        within three years, and the authority can order payment plus
+        compensation.
+      hi: >-
+        अगर लिखित माँग से बात न बने, तो सिविल कोर्ट की जगह श्रम प्राधिकरण के पास दावा कर
+        सकते हैं, समाधान पोर्टल पर ऑनलाइन या लेबर कमिश्नर के दफ़्तर में। दावा तीन साल के
+        अंदर हो सकता है, और प्राधिकरण भुगतान के साथ मुआवज़ा भी दिला सकता है।
+    source_note: >-
+      Code on Wages 2019 claims mechanism with a three year limit. SAMADHAN
+      (samadhan.labour.gov.in) accepts wage claims; version 2.0 covers the
+      Labour Codes.
+
+  - id: SAL-3
+    problem_type: salary
+    statute: "Code on Wages, 2019"
+    section: "Section 17"
+    title:
+      en: Final settlement is supposed to be quick
+      hi: फुल एंड फाइनल जल्दी होना चाहिए
+    plain:
+      en: >-
+        The Code on Wages expects full and final dues within two working days
+        when someone resigns or is removed. Many companies still run 30 to 45
+        day cycles, and whether this applies to you can depend on your role, so
+        use it as pressure in your demand rather than as a guarantee.
+      hi: >-
+        वेतन संहिता के अनुसार इस्तीफ़े या नौकरी से निकाले जाने पर फुल एंड फाइनल दो कामकाजी
+        दिनों में होना चाहिए। कई कंपनियाँ अब भी 30 से 45 दिन लेती हैं, और यह आप पर लागू
+        होगा या नहीं, यह आपकी भूमिका पर भी निर्भर है। इसलिए इसे माँग में दबाव की तरह
+        इस्तेमाल करें, पक्की गारंटी की तरह नहीं।
+    source_note: >-
+      Section 17(2) two working day settlement on resignation, removal or
+      retrenchment. Treated cautiously because coverage and practice vary.
+
+  - id: NOT-1
+    problem_type: notice
+    statute: ""
+    section: ""
+    title:
+      en: A legal notice is not a court case, but do not ignore it
+      hi: कानूनी नोटिस अदालत का केस नहीं है, पर इसे नज़रअंदाज़ न करें
+    plain:
+      en: >-
+        A legal notice is a formal letter, usually sent through a lawyer, saying
+        what the other side wants and by when. It does not mean a case has been
+        filed. But it is often the step before one, and if you stay silent they
+        can later show the court that you never disputed it.
+      hi: >-
+        कानूनी नोटिस एक औपचारिक चिट्ठी है, जो आमतौर पर वकील के ज़रिए भेजी जाती है, जिसमें
+        लिखा होता है कि सामने वाला क्या चाहता है और कब तक। इसका मतलब यह नहीं कि केस हो
+        गया है। पर अक्सर यह केस से पहले का कदम होता है, और चुप रहने पर वे बाद में अदालत
+        को दिखा सकते हैं कि आपने कभी विरोध नहीं किया।
+    source_note: >-
+      General civil practice. No single statute governs private legal notices.
+
+  - id: NOT-2
+    problem_type: notice
+    statute: ""
+    section: ""
+    title:
+      en: Reply in writing, on the facts, before the deadline
+      hi: समय सीमा से पहले, तथ्यों पर, लिखित जवाब दें
+    plain:
+      en: >-
+        The usual response is a calm written reply, sent before the deadline by
+        registered post, that answers their points one by one and gives your side.
+        Do not admit things that are not true, and do not threaten them. If the
+        notice is about a cheque, a property, or anything involving the police or
+        a court date, get a lawyer to write the reply.
+      hi: >-
+        आमतौर पर समय सीमा से पहले रजिस्टर्ड डाक से एक शांत, लिखित जवाब भेजा जाता है जो
+        उनकी हर बात का जवाब दे और आपका पक्ष रखे। जो बात सच नहीं है उसे न मानें, और धमकी
+        न दें। अगर नोटिस चेक, प्रॉपर्टी, पुलिस या अदालत की तारीख़ से जुड़ा है, तो जवाब
+        किसी वकील से लिखवाएँ।
+    source_note: General civil practice.
+
+# ---------------------------------------------------------------------------
+# What the other side usually says, and a grounded way to answer it. Used by
+# the practice tab. key_points are groups of words; a reply covers a point if
+# it uses any word from the group.
+objections:
+  deposit:
+    - they_say: The flat needed painting and a deep clean, so I kept the deposit.
+      reply: >-
+        Normal wear and tear after living somewhere is not damage. If you are
+        claiming real damage, send me the bills and photos. Otherwise please
+        return the full amount.
+      key_points: [[wear and tear, normal use, normal], [bills, bill, receipt, invoice], [photos, photo, proof, evidence]]
+      fact: DEP-1
+    - they_say: You left without giving a month's notice, so the deposit is gone.
+      reply: >-
+        If the agreement required notice, the most you can adjust is that much
+        rent, not the whole deposit. Please send the calculation in writing.
+      key_points: [[agreement, contract], [notice period, one month, a month, rent for], [calculation, in writing, written]]
+      fact: DEP-1
+    - they_say: I will return it when the new tenant pays me.
+      reply: >-
+        My deposit is not tied to your next tenant. It became due when I handed
+        back the keys.
+      key_points: [[keys, handed over, handover, vacated], [due, owed, mine], [new tenant, not linked, nothing to do]]
+      fact: DEP-1
+  refund:
+    - they_say: You used the product, so we cannot refund it.
+      reply: >-
+        I used it the normal way and it failed. Normal use does not cancel a
+        defect. I want a refund or a working replacement.
+      key_points: [[defect, defective, faulty, failed], [normal use, used it normally, used normally], [refund, replacement, replace]]
+      fact: REF-1
+    - they_say: Our policy says no returns after 7 days.
+      reply: >-
+        A return window does not cover a defective product. If this is not fixed
+        I will complain on the National Consumer Helpline and then before the
+        District Commission.
+      key_points: [[defect, defective, faulty], [helpline, 1915, consumer helpline], [commission, consumer court, e-daakhil, complaint]]
+      fact: REF-2
+    - they_say: Please contact the manufacturer, not us.
+      reply: >-
+        I bought it from you and paid you. You are responsible for what you sold,
+        and you will be named in the complaint.
+      key_points: [[bought from you, paid you, your platform, sold], [responsible, liable], [complaint, named]]
+      fact: REF-1
+  salary:
+    - they_say: Your dues are on hold until exit clearance is complete.
+      reply: >-
+        Clearance cannot hold back wages I have already earned. Please release my
+        salary and tell me in writing what is still pending from my side.
+      key_points: [[earned, worked], [release, pay], [in writing, written, email]]
+      fact: SAL-1
+    - they_say: You did not serve your full notice period.
+      reply: >-
+        At most you can adjust the shortfall my contract allows. That does not
+        let you hold everything. Please send the calculation.
+      key_points: [[contract, offer letter, appointment letter], [adjust, shortfall, deduct only], [calculation, breakup, in writing]]
+      fact: SAL-1
+    - they_say: Full and final takes 45 days here, that is our policy.
+      reply: >-
+        The Code on Wages expects it far faster. If it is not paid soon I will file
+        a claim on the SAMADHAN portal.
+      key_points: [[code on wages, law], [samadhan, labour, claim], [two days, 2 days, faster, soon]]
+      fact: SAL-3
+  notice:
+    - they_say: If you do not pay within 15 days we will take you to court.
+      reply: >-
+        I have received your notice and I dispute the claim. My reply is enclosed.
+        I am open to discussing a settlement in writing.
+      key_points: [[dispute, deny, disagree, not liable], [reply, response, enclosed], [settle, settlement, discuss]]
+      fact: NOT-2
+    - they_say: You did not reply, so you have accepted our claim.
+      reply: >-
+        I do not accept your claim. This reply puts my position on record.
+      key_points: [[do not accept, deny, dispute, reject], [on record, in writing, reply]]
+      fact: NOT-1
+
+# ---------------------------------------------------------------------------
+# Follow up questions for missing facts, asked once, at most two at a time.
+questions:
+  deposit:
+    amount: {en: "How much was the deposit?", hi: "डिपॉज़िट कितना था?"}
+    date: {en: "When did you move out?", hi: "आपने मकान कब खाली किया?"}
+  refund:
+    amount: {en: "How much did you pay?", hi: "आपने कितने पैसे दिए थे?"}
+    date: {en: "When did the problem start, or when did they refuse?", hi: "समस्या कब शुरू हुई, या उन्होंने कब मना किया?"}
+  salary:
+    amount: {en: "Roughly how much is unpaid?", hi: "लगभग कितना पैसा बाकी है?"}
+    date: {en: "When was your last working day?", hi: "आपका आख़िरी कामकाजी दिन कब था?"}
+  notice:
+    date: {en: "When did you receive the notice?", hi: "नोटिस आपको कब मिला?"}
+    amount: {en: "How much are they asking for, if anything?", hi: "वे कितने पैसे माँग रहे हैं, अगर माँग रहे हैं?"}
+
+# ---------------------------------------------------------------------------
+# Red flags. Triggers are regular expressions matched on the lowercased story.
+red_flags:
+  - id: RF-violence
+    triggers:
+      - '\b(hit|beat|slapped|attacked|assaulted|hurt|pushed)\s+me\b'
+      - '\bthreat\w*\s+(me\s+)?to\s+(hit|kill|beat|hurt|harm)\b'
+      - '\b(weapon|knife|stalking|stalked)\b'
+      - 'मारा|पीटा|मारने की धमकी|जान से'
+    message:
+      en: >-
+        You mentioned violence or a threat to your safety. That needs the police,
+        not a self-help tool. If you are in danger right now, call 112.
+      hi: >-
+        आपने हिंसा या अपनी सुरक्षा को ख़तरे की बात कही है। इसके लिए पुलिस की ज़रूरत है,
+        किसी ऐप की नहीं। अगर आप अभी ख़तरे में हैं तो 112 पर कॉल करें।
+  - id: RF-criminal
+    triggers:
+      - '\bfir\b'
+      - '\bpolice (case|complaint|station)\b'
+      - '\b(arrested|bail|chargesheet|jail)\b'
+      - '\b(police|judicial) custody\b'
+      - '\bcriminal (case|complaint)\b'
+      - '\b(ipc|bns)\b'
+      - 'एफआईआर|पुलिस केस|गिरफ्तार|जमानत'
+    message:
+      en: >-
+        This sounds like a criminal matter. NyaySetu only handles everyday
+        civil problems, so please speak to a criminal lawyer. You can get one for
+        free through the NALSA helpline 15100.
+      hi: >-
+        यह आपराधिक मामला लगता है। न्यायसेतु सिर्फ़ रोज़मर्रा के सिविल मामलों में मदद करता
+        है, इसलिए किसी क्रिमिनल वकील से बात करें। NALSA हेल्पलाइन 15100 से मुफ़्त वकील
+        मिल सकता है।
+  - id: RF-court
+    triggers:
+      - '\b(summons|summon|warrant)\b'
+      - '\bcourt (date|hearing|notice|tomorrow)\b'
+      - '\bhearing (is|on|next)\b'
+      - '\bnext hearing\b'
+      - 'समन|सुनवाई|वारंट'
+    message:
+      en: >-
+        You mentioned a court date or summons. Missing a court deadline can hurt
+        you badly, so please see an advocate now. NALSA (15100) can arrange free
+        legal aid.
+      hi: >-
+        आपने अदालत की तारीख़ या समन की बात कही है। अदालत की तारीख़ चूकना बहुत नुकसान कर
+        सकता है, इसलिए अभी किसी वकील से मिलें। NALSA (15100) मुफ़्त कानूनी सहायता दिला
+        सकता है।
+  - id: RF-cheque
+    triggers:
+      - '\bcheque\b'
+      - '\b(bounced|dishonou?red)\b'
+      - '\bsection 138\b'
+      - 'चेक'
+    message:
+      en: >-
+        A notice about a bounced cheque is more serious than an ordinary demand.
+        Under Section 138 of the Negotiable Instruments Act, 1881, the person who
+        issued the cheque usually has 15 days from receiving the notice to pay
+        before a criminal complaint can be filed. Talk to a lawyer today.
+      hi: >-
+        बाउंस हुए चेक का नोटिस साधारण माँग से ज़्यादा गंभीर है। परक्राम्य लिखत अधिनियम,
+        1881 की धारा 138 के तहत चेक देने वाले के पास आमतौर पर नोटिस मिलने से 15 दिन
+        होते हैं, उसके बाद आपराधिक शिकायत हो सकती है। आज ही किसी वकील से बात करें।
+  - id: RF-amount
+    triggers: []
+    message:
+      en: >-
+        The amount is above what the District Consumer Commission hears (fifty
+        lakh rupees), and at this size a lawyer is worth it. Treat the guidance
+        below as background.
+      hi: >-
+        यह रकम ज़िला उपभोक्ता आयोग की सीमा (पचास लाख रुपये) से ज़्यादा है, और इतनी बड़ी
+        रकम में वकील रखना ठीक रहेगा। नीचे की जानकारी को सिर्फ़ पृष्ठभूमि समझें।
+  - id: RF-late
+    triggers: []
+    message:
+      en: >-
+        Going by your dates, the normal time limit has probably passed. You may
+        still be able to proceed if there is a good reason for the delay, but a
+        lawyer should look at this before you spend money on it.
+      hi: >-
+        आपकी बताई तारीख़ों के हिसाब से सामान्य समय सीमा शायद निकल चुकी है। देरी का ठीक
+        कारण हो तो शायद आगे बढ़ा जा सके, पर पैसा ख़र्च करने से पहले किसी वकील को दिखाएँ।

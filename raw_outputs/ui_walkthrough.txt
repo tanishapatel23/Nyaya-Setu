@@ -1,0 +1,68 @@
+Browser walkthrough of the running app (Playwright driving Chrome), 11 Nov 2026.
+Each line is one action. ok means the page showed no error after it.
+
+== Main flows ==
+inputs on welcome: 1, placeholder: Type what happened, or attach a notice or bill
+[attach notice photo] ok
+cards: 2  last: balance | RECEIVED A LEGAL NOTICE |  | Adv. Meera Joshi has sent you a legal notice on behalf of Mr. Prakash Kulkarni, demanding Rs 85,000 within 15 days. A notice is not a court case. It is usually the step before one, so it deserves a calm written reply before the
+[attach agreement] ok
+insight: Worth knowing | The notice does not mention your security deposit of Rs 44,000, which the landlord still holds. Your reply should say that any genuine dues can only be adjusted against it. | The notice claims repair or damage costs. Ask for the bills and photos behind that figure. Normal wear and tear i
+chips: 4
+[chip Do I need a lawyer for this?] ok
+chip -> balance | Do I need a lawyer for this? | Not to start. You can send the written demand yourself, and the usual next steps (an online consumer complaint, a labour portal complaint, a small claim) do not need one either. Get one if the other side files a case, if th
+[faq typed] ok
+faq -> balance | Can I reply to the notice myself? | For a simple money dispute, yes. Keep it calm and factual, deny what is wrong point by point, and send it before the deadline. The draft in the Documents tab is a starting point. If it involves a cheque, property, the 
+[nonsense] ok
+nonsense -> balance |  | I did not quite follow that. You can correct a detail (for example, it was 50,000 not 40,000), attach a document, or ask one of these: |  | Do I need a lawyer for this? |  | Can I reply to the notice myself? |  | How do I send the notice? |  | What happens if I ignor
+[docs tab] ok
+prefill your_name='Mr. Rohit Verma' their_name='Adv. Meera Joshi, SHARMA & ASSOCIATES'
+extra='I vacated the premises and handed back the keys on 5 September 2026; your client holds my interest free security deposit of Rs 44,000, which your notice does not mention, and any genuine dues can only'
+[download] reply.docx
+[summary] my_case_summary.docx
+[practice] ok
+[practice next] ok
+[lang हिन्दी] ok
+[lang English] ok
+[lang Auto] ok
+[switch] ok
+switch -> balance |  | That sounds like a separate problem: salary or final settlement not paid. Want to start a new case for it? Your current case stays in this chat above. |  | Start a new case for it |  | Keep going with this one
+[switch new] ok
+after switch -> balance |  | Got it, this is about: salary or final settlement not paid. One quick thing so I can give you exact dates: |  | Roughly how much is unpaid? |  | If you are not sure, just say so. You can also attach the agreement, bill or notice instead.
+[salary followup] ok
+salary -> balance | SALARY OR FINAL SETTLEMENT NOT PAID |  | About Rs 1,50,000 of your pay is still owed, and it has been unpaid since about 12 Aug 2026. Wages for days you already worked cannot be held back over clearance or handover. The employer can only adjust what your c
+[edit form] ok
+case file: Case file | Problem | Salary or final settlement not paid | Amount | Rs 1,50,000 | Key date | 12 Aug 2026 | Place | Bengaluru | Proof | not yet | 2.8 yrs | left to act | Free help | NALSA free legal aid | 15100 | SAMADHAN labour portal | samadhan.labour.gov.in
+[docs salary] ok
+after new case inputs: 1
+[vague] ok
+[something else] ok
+else -> balance | I only handle deposits, refunds, unpaid salary and legal notices for now, so I would rather not guess. For anything else, NALSA's free helpline 15100 can point you to the right place, and the emergency number is 112.
+[after else, deposit] ok
+dep -> balance |  | Got it, this is about: security deposit not returned. Two quick things so I can give you exact dates: |  | How much was the deposit? | When did you move out? |  | If you are not sure, just say so. You can also attach the agreement, bill or notice instead.
+[cyber] ok
+cyber -> balance |  | If you still want help with your earlier problem, answer the question above whenever you are ready.
+[sample invoice] ok
+invoice -> balance | REFUND, DEFECTIVE PRODUCT OR BAD SERVICE |  | You paid Rs 3,499 on 2 Oct 2026, and did not get what you paid for. That counts as a defect or a deficiency in service under the Consumer Protection Act, 2019, so you can ask for a refund, a replacement or comp
+[invoice story] ok
+refund -> balance |  | Noted, I have added that to your case file. Your plan above still stands. If any number or date has changed, tell me the new one and I will redo the dates. |  | Do I need a lawyer for this? |  | How do I send the notice? |  | What if they ignore my notice? |  | The r
+[sample agreement] ok
+agr -> balance |  | Got it, this is about: security deposit not returned. One quick thing so I can give you exact dates: |  | When did you move out? |  | If you are not sure, just say so. You can also attach the agreement, bill or notice instead.
+[hindi] ok
+hi -> balance | सिक्योरिटी डिपॉज़िट वापस नहीं मिला |  | आपने ₹25,000 का डिपॉज़िट दिया था और लगभग 3 महीने पहले (12 अगस्त 2026 के आसपास) मकान खाली किया। मकान मालिक सिर्फ़ बकाया किराए या साबित किए जा सकने वाले नुकसान का पैसा रख सकता है। बाकी पैसा चाबी लौटाते ही आपका हो गया थ
+
+== Read aloud, calendar, sharing, feedback, save and reopen, phone width ==
+answer ok
+iframes 1
+ics nyaysetu_dates.ics
+wa https://wa.me/?text=My%20case%3A%20Security%20deposit%20not%20returned%0AAmount%3A%20Rs%20
+read btn: 🔊
+Read aloud
+after click: 🔊
+Stop
+thumbs 2
+feedback ok 1
+saved nyaysetu_case_20261110.json
+faq ok
+share ok
+reopen ok 1 1
+mobile ok

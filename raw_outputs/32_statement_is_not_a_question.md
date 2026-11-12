@@ -1,0 +1,187 @@
+# 32_statement_is_not_a_question
+
+_Test date fixed at 2026-11-10. Offline model._
+
+**User:**
+
+> the phone stopped working after a week
+> (attached invoice.pdf)
+
+**NyaySetu:**
+
+[Read invoice.pdf as: Bill or invoice]  
+  Seller: Nimbus Retail Private Limited  
+  Order ID: OD3281947716  
+  Invoice no.: NR-2026-55821  
+  Order date: 2 Oct 2026  
+  Amount paid: Rs 3,499  
+  Return window: 7 days  
+I have added the amount, date and seller to your case and your letter.
+
+**NyaySetu (answer):**
+
+```
+You paid Rs 3,499 on 2 Oct 2026, and did not get what you paid for. That counts as a defect or a deficiency in service under the Consumer Protection Act, 2019, so you can ask for a refund, a replacement or compensation. You have the two papers that matter most, so your position is strong.
+
+Time limit: Last day to file a consumer complaint: around 1 Oct 2028, about 1 year and 11 months from now.
+
+Worth knowing
+- The invoice mentions a 7 day return window. That does not cancel your claim if the product was defective.
+
+What to do
+1. Today: Send the written demand from the Documents tab to the seller's support email and registered address. Give 15 days.
+2. Same day: Register a free grievance with the National Consumer Helpline: call 1915 or use consumerhelpline.gov.in. Note the docket number.
+3. After 25 Nov 2026: Still nothing? File on e-Daakhil (edaakhil.nic.in) before the District Commission. The complaint draft is in the Documents tab.
+
+Your proof
+   [have] invoice or bill
+   [have] order id
+   [get]  photos or video (shows the condition at handover or the defect)
+   [get]  messages or emails (anything where they admit the amount or the delay)
+
+The law, in plain words
+[REF-1] A faulty product or a poor service is a consumer complaint
+    If you paid for something and it arrived broken, stopped working, never arrived, or the service fell well short of what was promised, the law calls that a defect or a deficiency in service. You are a consumer and you can claim a refund, a replacement and compensation.
+    Source: Consumer Protection Act, 2019, Section 2(10) and Section 2(11)
+[REF-2] Complain free on the consumer helpline, then file online if needed
+    The National Consumer Helpline takes your complaint for free and contacts the company, and plenty of refunds come through at that stage. If that fails, you can file a complaint before the District Consumer Commission yourself, online on e-Daakhil, without a lawyer. The District Commission hears cases where you paid up to fifty lakh rupees.
+    Source: Consumer Protection Act, 2019, Section 34 and Section 35
+[REF-3] You have two years from the problem to file
+    A consumer complaint should be filed within two years of the date the problem arose. After that the commission can still allow it, but only if you show a good reason for the delay, and it may say no.
+    Source: Consumer Protection Act, 2019, Section 69
+
+Free help
+   NALSA free legal aid: 15100. Free advice from a panel lawyer, and help applying for a free lawyer.
+   National Consumer Helpline: 1915 or 1800-11-4000, WhatsApp 8800001915, consumerhelpline.gov.in. Free complaint before going to court. The company is contacted for you, and many cases settle here.
+   e-Daakhil: edaakhil.nic.in. File a consumer complaint online yourself and track it.
+
+NyaySetu gives general legal information, not legal advice. It is not a lawyer. For anything serious, urgent or already in court, talk to an advocate. Free legal aid is available on the NALSA helpline 15100.
+```
+
+**User:**
+
+> they refuse to refund and stopped replying to my emails
+
+**NyaySetu:**
+
+Updated: your proof.
+
+**NyaySetu (answer):**
+
+```
+You paid Rs 3,499 on 2 Oct 2026, and did not get what you paid for. That counts as a defect or a deficiency in service under the Consumer Protection Act, 2019, so you can ask for a refund, a replacement or compensation. You have the two papers that matter most, so your position is strong.
+
+Time limit: Last day to file a consumer complaint: around 1 Oct 2028, about 1 year and 11 months from now.
+
+Worth knowing
+- The invoice mentions a 7 day return window. That does not cancel your claim if the product was defective.
+
+What to do
+1. Today: Send the written demand from the Documents tab to the seller's support email and registered address. Give 15 days.
+2. Same day: Register a free grievance with the National Consumer Helpline: call 1915 or use consumerhelpline.gov.in. Note the docket number.
+3. After 25 Nov 2026: Still nothing? File on e-Daakhil (edaakhil.nic.in) before the District Commission. The complaint draft is in the Documents tab.
+
+Your proof
+   [have] invoice or bill
+   [have] order id
+   [have] messages or emails
+   [get]  photos or video (shows the condition at handover or the defect)
+
+The law, in plain words
+[REF-1] A faulty product or a poor service is a consumer complaint
+    If you paid for something and it arrived broken, stopped working, never arrived, or the service fell well short of what was promised, the law calls that a defect or a deficiency in service. You are a consumer and you can claim a refund, a replacement and compensation.
+    Source: Consumer Protection Act, 2019, Section 2(10) and Section 2(11)
+[REF-2] Complain free on the consumer helpline, then file online if needed
+    The National Consumer Helpline takes your complaint for free and contacts the company, and plenty of refunds come through at that stage. If that fails, you can file a complaint before the District Consumer Commission yourself, online on e-Daakhil, without a lawyer. The District Commission hears cases where you paid up to fifty lakh rupees.
+    Source: Consumer Protection Act, 2019, Section 34 and Section 35
+[REF-3] You have two years from the problem to file
+    A consumer complaint should be filed within two years of the date the problem arose. After that the commission can still allow it, but only if you show a good reason for the delay, and it may say no.
+    Source: Consumer Protection Act, 2019, Section 69
+
+Free help
+   NALSA free legal aid: 15100. Free advice from a panel lawyer, and help applying for a free lawyer.
+   National Consumer Helpline: 1915 or 1800-11-4000, WhatsApp 8800001915, consumerhelpline.gov.in. Free complaint before going to court. The company is contacted for you, and many cases settle here.
+   e-Daakhil: edaakhil.nic.in. File a consumer complaint online yourself and track it.
+
+NyaySetu gives general legal information, not legal advice. It is not a lawyer. For anything serious, urgent or already in court, talk to an advocate. Free legal aid is available on the NALSA helpline 15100.
+```
+
+**Draft: Legal notice**
+
+```
+LEGAL NOTICE
+
+Date: 10 November 2026
+
+From:
+Rohit Verma
+________
+
+To:
+Nimbus Retail Private Limited
+Plot 9, MIDC Bhosari, Pune 411026
+
+Subject: Refund of Rs 3,499 against order OD3281947716
+
+Sir or Madam,
+
+1. On or about 2 October 2026 I paid you Rs 3,499 under order OD3281947716.
+
+2. What I received was not as promised: it was defective, which I reported to you promptly.
+
+3. Despite my complaints you have refused to refund the amount or replace the goods.
+
+4. This is a defect in goods or a deficiency in service under the Consumer Protection Act, 2019.
+
+5. I therefore call upon you to refund Rs 3,499, or replace the goods with a working unit within 15 days of receiving this notice.
+
+6. If you fail to do so I will file a complaint before the District Consumer Disputes Redressal Commission and claim compensation and costs, without further notice and at your risk as to costs.
+
+Yours faithfully,
+
+Rohit Verma
+
+------------------------------------------------------------
+Before you send (delete this part):
+- Fill in every blank (____) and check each date and amount before sending.
+- Send it by registered post with acknowledgement due, keep the receipt, and send the same text by email or WhatsApp.
+- This draft comes from general information, not from a lawyer. For a large amount, have an advocate look at it.
+```
+
+**Draft: Consumer complaint**
+
+```
+BEFORE THE DISTRICT CONSUMER DISPUTES REDRESSAL COMMISSION, ________
+
+Rohit Verma, ________  ...Complainant
+Versus
+Nimbus Retail Private Limited, Plot 9, MIDC Bhosari, Pune 411026  ...Opposite Party
+
+CONSUMER COMPLAINT
+
+Date: 10 November 2026
+
+Subject: Complaint under Section 35 of the Consumer Protection Act, 2019
+
+1. The complainant is a consumer who paid the opposite party Rs 3,499 under order OD3281947716 on or about 2 October 2026.
+
+2. The goods or services were defective or deficient: ________.
+
+3. The complainant reported the problem and asked for a refund or replacement, which the opposite party refused.
+
+4. This amounts to a defect in goods or a deficiency in service, and the complaint is filed within two years of the cause of action.
+
+5. The amount paid is within the pecuniary limit of this Commission and the cause of action arose within its territory.
+
+6. The complainant prays that the opposite party be directed to refund Rs 3,499, pay compensation for the harassment caused, and pay the costs of this complaint.
+
+Verified that the contents above are true to my knowledge and belief.
+
+Rohit Verma
+
+------------------------------------------------------------
+Before you send (delete this part):
+- File this on edaakhil.nic.in, or at the District Commission office, with copies of every proof attached.
+- The commission will want an index, a list of dates and an affidavit. e-Daakhil walks you through them.
+- This is a draft from general information, not from a lawyer. Have it checked if the amount is large.
+```

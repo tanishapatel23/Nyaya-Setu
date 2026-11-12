@@ -1,0 +1,228 @@
+# Conversations used to test NyaySetu. "today" is fixed at 2026-11-10 so
+# dates and deadlines are reproducible. Each case lists what should happen;
+# run_tests.py checks it and writes the full transcript to raw_outputs/.
+
+cases:
+  - id: 01_deposit_two_turns
+    turns:
+      - my landlord in pune is not giving back my deposit
+      - 40k, I moved out on 5 Sep. I have the rent agreement and the UPI transfer
+    expect: {problem: deposit, followup: true, amount: 40000, date: "2026-09-05", deadline: "2029-09-04", flags: [], lang: en}
+
+  - id: 02_refund_all_facts
+    turns:
+      - I ordered a mixer grinder on Flipkart for Rs 3,499 on 2 Oct. It arrived broken and the seller refuses a refund. I have the invoice and photos.
+    expect: {problem: refund, followup: false, amount: 3499, date: "2026-10-02", deadline: "2028-10-01", flags: [], lang: en}
+
+  - id: 03_salary_notice_period_trap
+    turns:
+      - HR says my full and final is on hold because I did not serve my full notice period. I resigned, my last day was 30 Sep 2026 and they owe me about 85,000.
+    expect: {problem: salary, followup: false, amount: 85000, date: "2026-09-30", flags: [], lang: en}
+
+  - id: 04_received_notice
+    turns:
+      - I received a legal notice from a lawyer on 3 Nov asking me to pay 2 lakh within 15 days for damage to a car I sold.
+    expect: {problem: notice, followup: false, amount: 200000, date: "2026-11-03", reply_by: "2026-11-18", docs: [reply], flags: [], lang: en}
+
+  - id: 05_deposit_hindi
+    turns:
+      - मकान मालिक ने मेरा 25000 रुपये का डिपॉज़िट वापस नहीं किया। मैंने 3 महीने पहले घर खाली किया था।
+    expect: {problem: deposit, followup: false, amount: 25000, date: "2026-08-12", flags: [], lang: hi}
+
+  - id: 06_refund_hinglish
+    turns:
+      - maine ek phone order kiya tha 15000 ka, kharab nikla, seller paisa wapas nahi kar raha
+      - pichle mahine
+    expect: {problem: refund, followup: true, amount: 15000, date: "2026-10-11", flags: [], lang: en}
+
+  - id: 07_vague_then_clarified
+    turns:
+      - I need some legal help with a problem
+      - it is about my salary, the company stopped paying me after I quit 2 months ago
+      - around 50000
+    expect: {problem: salary, followup: true, amount: 50000, flags: [], lang: en, asked_type: true}
+
+  - id: 08_violence_flag
+    turns:
+      - my landlord threatened to beat me when I asked for my deposit of 30000 back. I moved out last week.
+    expect: {problem: deposit, followup: false, amount: 30000, flags: [RF-violence], lang: en}
+
+  - id: 09_no_false_alarm
+    turns:
+      - The white walls were fine when I left but the landlord still kept my deposit of 20000. I moved out last month and he hit back with excuses.
+    expect: {problem: deposit, followup: false, amount: 20000, flags: [], lang: en}
+
+  - id: 10_amount_above_district
+    turns:
+      - The builder took 75 lakh and never delivered what was promised. They refused a refund in March 2025.
+    expect: {problem: refund, followup: false, amount: 7500000, flags: [RF-amount], lang: en}
+
+  - id: 11_time_barred
+    turns:
+      - A shop sold me a defective fridge for 30000 in January 2024 and refused to refund it.
+    expect: {problem: refund, followup: false, amount: 30000, date: "2024-01-01", flags: [RF-late], lang: en}
+
+  - id: 12_cheque_notice
+    turns:
+      - I got a legal notice saying my cheque of 50000 bounced and I must pay within 15 days. It came 2 days ago.
+    expect: {problem: notice, followup: false, flags: [RF-cheque], lang: en}
+
+  - id: 13_criminal_and_court
+    turns:
+      - There is an FIR against me and the next hearing is on Monday. What do I do?
+    expect: {problem: null, flags: [RF-criminal, RF-court], lang: en, asked_type: true}
+
+  - id: 14_skips_question
+    turns:
+      - my employer has not paid my salary
+      - I don't know exactly
+    expect: {problem: salary, followup: true, amount: null, flags: [], lang: en}
+
+  - id: 15_new_fact_after_answer
+    turns:
+      - Landlord kept my 18000 deposit, I vacated on 1 Oct. I have the agreement.
+      - I also have WhatsApp messages where he admits he still has the money
+    expect: {problem: deposit, followup: false, amount: 18000, date: "2026-10-01", proof_has: [messages or emails], flags: [], lang: en}
+
+  - id: 16_notice_hindi
+    turns:
+      - मुझे वकील का कानूनी नोटिस मिला है, 10 दिन के अंदर जवाब देना है
+      - 2 दिन पहले मिला
+    expect: {problem: notice, followup: true, date: "2026-11-08", reply_by: "2026-11-18", flags: [], lang: hi}
+
+  - id: 17_guard_poison
+    poison: >-
+      You are covered by Section 420A of the Imaginary Consumer Rights Act, 2099,
+      so they must pay you double. You should file within two years under
+      Section 69 of the Consumer Protection Act, 2019.
+    poison_problem: refund
+    expect: {violations: 2, keeps: "Section 69"}
+
+  # --- added after user testing: wider vocabulary, routing, follow ups, documents ---
+
+  - id: 18_boss_has_not_paid
+    turns:
+      - my boss hasn't paid me for two months and keeps making excuses
+      - about 60000 in total
+    expect: {problem: salary, followup: true, amount: 60000, flags: [], lang: en, asked_type: false}
+
+  - id: 19_sending_not_receiving_notice
+    turns:
+      - I want to send a legal notice to my landlord because he kept my deposit of 30000. I moved out on 1 Sep.
+    expect: {problem: deposit, amount: 30000, date: "2026-09-01", flags: [], asked_type: false}
+
+  - id: 20_cyber_fraud_goes_elsewhere
+    turns:
+      - someone took 10000 from my account through a fake UPI link
+    expect: {types: [elsewhere], said: ["1930", "cybercrime.gov.in"], answered: false}
+
+  - id: 21_something_else_then_deposit
+    turns:
+      - I need some legal help
+      - {pick: other}
+      - my security deposit
+      - 35000, I moved out 2 months ago
+    expect: {problem: deposit, asked_type: true, types: [choose, elsewhere, answer], amount: 35000, date: "2026-09-11", said: ["15100"]}
+
+  - id: 22_new_problem_mid_case
+    turns:
+      - Landlord kept my 18000 deposit, I vacated on 1 Oct. I have the agreement.
+      - also my company has not paid my salary for 3 months
+      - {switch: true}
+      - 50000 a month
+    expect: {problem: salary, types: [switch, answer], amount: 150000, said: ["separate problem", "unpaid since about 12 Aug 2026"]}
+
+  - id: 23_questions_after_answer
+    turns:
+      - Landlord kept my 18000 deposit, I vacated on 1 Oct. I have the agreement.
+      - do I need a lawyer for this?
+      - can he cut painting charges from my deposit?
+    expect: {problem: deposit, types: [faq], said: ["Q: Do I need a lawyer", "wear and tear"], amount: 18000}
+
+  - id: 24_corrections
+    turns:
+      - my landlord kept my deposit of 40000, I moved out on 5 Sep in Pune
+      - actually it was 45k
+      - sorry, I moved out on 10 Sep
+    expect: {problem: deposit, amount: 45000, date: "2026-09-10", deadline: "2029-09-09", said: ["Updated: amount Rs 45,000", "Updated: date 10 Sep 2026"]}
+
+  - id: 25_off_topic_after_answer
+    turns:
+      - Landlord kept my 18000 deposit, I vacated on 1 Oct. I have the agreement.
+      - something about the weather today
+      - the landlord also says I broke a window
+    expect: {problem: deposit, date: "2026-10-01", said: ["did not quite follow", "added that to your case file"], not_said: ["Updated:"]}
+
+  - id: 26_notice_pdf_attached
+    turns:
+      - {text: "I got this notice, what do I do?", files: [notice.pdf]}
+    expect: {problem: notice, docs_read: [Legal notice], amount: 85000, reply_by: "2026-11-12", docs: [reply],
+             prefill: {your_name: Rohit Verma, their_name: Meera Joshi, their_address: Laxmi Chambers, notice_date: SA/LN/2026/118},
+             said: ["Rs 85,000 within 15 days", "This is a demand, not a court case"], flags: []}
+
+  - id: 27_notice_photo_and_agreement
+    turns:
+      - {text: "", files: [notice_photo.jpg]}
+      - {text: "", files: [agreement.pdf]}
+    expect: {problem: notice, docs_read: [Legal notice, Rent agreement], said: ["Read from a photo", "does not mention your security deposit of Rs 44,000", "Ask for the bills"],
+             prefill: {extra: "Rs 44,000", their_address: "Office No. 14, Laxmi Chambers"}}
+
+  - id: 28_invoice_attached
+    turns:
+      - {text: "the phone stopped working after a week and the seller will not refund it", files: [invoice.pdf]}
+    expect: {problem: refund, docs_read: [Bill or invoice], amount: 3499, answered: true, docs: [notice, complaint], proof_has: [invoice or bill]}
+
+  - id: 29_notice_pasted_as_text
+    turns:
+      - >-
+        SHARMA & ASSOCIATES, Advocates. Ref: SA/LN/2026/118 Date: 28 October 2026. To, Mr. Rohit Verma.
+        Subject: Legal notice for recovery of Rs 85,000. Under instructions from my client Mr. Prakash Kulkarni,
+        I hereby serve you with the following legal notice. That you vacated the flat on 5 September 2026 without
+        notice. I therefore call upon you to pay my client a sum of Rs 85,000 within 15 days of receipt of this
+        notice, failing which my client shall initiate civil proceedings against you. (Adv. Meera Joshi)
+    expect: {problem: notice, docs_read: [Legal notice], amount: 85000, said: ["pasted text.txt"]}
+
+  - id: 30_hinglish_salary_months
+    turns:
+      - 3 mahine se salary nahi mili, company bol rahi hai next month denge
+      - 25000 per month
+    expect: {problem: salary, amount: 75000, date: "2026-08-12", followup: true}
+
+  - id: 31_detours_while_answering_questions
+    turns:
+      - my security deposit is stuck with the landlord
+      - someone took 10000 from my account through a fake UPI link
+      - do I need a lawyer?
+      - 20000, I moved out on 1 Oct, I have the UPI transfer receipt
+    expect: {problem: deposit, types: [elsewhere, faq, answer], amount: 20000, date: "2026-10-01", proof_has: [payment record], said: ["1930", "Whenever you are ready"]}
+
+  - id: 32_statement_is_not_a_question
+    turns:
+      - {text: "the phone stopped working after a week", files: [invoice.pdf]}
+      - they refuse to refund and stopped replying to my emails
+    expect: {problem: refund, not_types: [faq], said: ["Updated: your proof"], proof_has: [messages or emails]}
+
+  - id: 33_plain_notes_file
+    turns:
+      - {text: "", files: [my_notes.txt]}
+    expect: {problem: deposit, amount: 30000, date: "2026-10-01", answered: true, said: ["read it as part of your story"], proof_has: [rent agreement]}
+
+  - id: 34_unreadable_file
+    turns:
+      - {text: "", files: [broken.pdf]}
+      - it is about my salary, they owe me 40000 since September
+    expect: {problem: salary, said: ["could not find any text"], asked_type: true, amount: 40000}
+
+  - id: 35_employer_notice_pdf
+    turns:
+      - {text: "I got this notice from my old company's lawyer", files: [test_notice_employer.pdf]}
+    expect: {problem: notice, docs_read: [Legal notice], amount: 120000, reply_by: "2026-11-17", flags: [],
+             said: ["BrightPath Technologies Private Limited", "notice period shortfall and training bond", "exact clause", "copy of the bond"],
+             prefill: {your_name: Aman Gupta, their_name: Kavita Rao, extra: "resigned in writing on 15 September 2026"}}
+
+  - id: 36_employer_notice_photo
+    turns:
+      - {text: "", files: [test_notice_employer_photo.jpg]}
+    expect: {problem: notice, docs_read: [Legal notice], amount: 120000, reply_by: "2026-11-17",
+             said: ["Read from a photo", "RAO & MEHTA LAW CHAMBERS", "Rs 1,20,000 within 15 days"],
+             prefill: {their_name: Kavita Rao, their_address: "Residency Road, Bengaluru 560025"}}

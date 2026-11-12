@@ -1,0 +1,377 @@
+# Answers to the follow-up questions people actually ask. Matched by keywords,
+# so they work offline. Plain practical guidance; any law they rely on is in
+# knowledge_base.yaml. "for" lists the problem types an answer applies to.
+# "show" marks the ones offered as suggested questions after an answer.
+
+faq:
+  - id: lawyer
+    for: [deposit, refund, salary, notice]
+    show: true
+    keys: [need a lawyer, do i need a lawyer, without a lawyer, without lawyer, lawyer, advocate, vakil, myself, on my own, वकील]
+    q: {en: "Do I need a lawyer for this?", hi: "क्या मुझे वकील की ज़रूरत है?"}
+    a:
+      en: >-
+        Not to start. You can send the written demand yourself, and the usual next steps (an online
+        consumer complaint, a labour portal complaint, a small claim) do not need one either. Get one if the other side files a case, if the amount is
+        large, or if the police or a court date is involved. NALSA (15100) can arrange a lawyer for
+        free if you qualify.
+      hi: >-
+        शुरुआत में नहीं। लिखित माँग आप ख़ुद भेज सकते हैं, और उपभोक्ता शिकायत बिना वकील के ऑनलाइन दर्ज हो
+        सकती है। वकील तब लें जब सामने वाला केस कर दे, रकम बड़ी हो, या पुलिस या अदालत की तारीख़ शामिल हो।
+        योग्य होने पर NALSA (15100) मुफ़्त वकील दिला सकता है।
+
+  - id: cost
+    for: [deposit, refund, salary, notice]
+    show: false
+    keys: [cost, how much will it cost, fees, fee, expensive, kharcha, kharch, paisa lagega, खर्च, फीस]
+    q: {en: "How much will this cost me?", hi: "इसमें कितना ख़र्च आएगा?"}
+    a:
+      en: >-
+        Sending the notice yourself costs only the registered post charge. The consumer helpline is
+        free. Fees at a commission, authority or court depend on the forum and the amount, and are
+        usually small for small claims. A private lawyer's fee varies a lot, so ask upfront. Legal
+        aid through 15100 is free if you qualify.
+      hi: >-
+        नोटिस ख़ुद भेजने में सिर्फ़ रजिस्टर्ड डाक का ख़र्च लगता है। उपभोक्ता हेल्पलाइन मुफ़्त है। आयोग, प्राधिकरण
+        या अदालत की फ़ीस मंच और रकम पर निर्भर करती है, और छोटे दावों में आमतौर पर कम होती है। प्राइवेट वकील
+        की फ़ीस बहुत अलग-अलग होती है, इसलिए पहले पूछ लें। योग्य होने पर 15100 से कानूनी सहायता मुफ़्त है।
+
+  - id: ignore
+    for: [deposit, refund, salary]
+    show: true
+    keys: [ignore, ignores, ignored, no reply, doesn't reply, does not reply, don't reply, not responding, not respond, still don't pay, still doesnt pay, still does not pay, they he jawab nahi, nahi diya to, what if they, what if he, what if she, phir bhi]
+    q: {en: "What if they ignore my notice?", hi: "अगर वे मेरे नोटिस को नज़रअंदाज़ करें तो?"}
+    a:
+      en: >-
+        That happens a lot, and it is why the notice matters. It shows you asked first and gave
+        them time. Once the deadline passes, move to the next step in your plan. Keep the postal
+        receipt and tracking as proof the notice reached them.
+      hi: >-
+        ऐसा अक्सर होता है, और इसीलिए नोटिस ज़रूरी है। यह दिखाता है कि आपने पहले माँगा और समय दिया। समय सीमा
+        निकलते ही अपनी योजना का अगला कदम उठाएँ। डाक की रसीद और ट्रैकिंग संभाल कर रखें, ताकि साबित हो सके
+        कि नोटिस पहुँचा।
+
+  - id: send
+    for: [deposit, refund, salary, notice]
+    show: true
+    keys: [registered post, speed post, how to send, how do i send, send the notice, send it, courier, post office, email enough, whatsapp enough, kaise bheje, कैसे भेजें]
+    q: {en: "How do I send the notice?", hi: "नोटिस कैसे भेजूँ?"}
+    a:
+      en: >-
+        Print it, sign it and keep a copy. Send it by Registered Post with acknowledgement due, or
+        Speed Post, from any post office, and keep the receipt and tracking number. Send the same
+        text by email or WhatsApp too, so there is a dated digital record.
+      hi: >-
+        प्रिंट करें, साइन करें और एक कॉपी रखें। किसी भी डाकघर से रजिस्टर्ड डाक (पावती सहित) या स्पीड पोस्ट से
+        भेजें, और रसीद व ट्रैकिंग नंबर संभालें। वही बात ईमेल या व्हाट्सएप पर भी भेजें, ताकि तारीख़ वाला डिजिटल
+        रिकॉर्ड रहे।
+
+  - id: time
+    for: [deposit, refund, salary, notice]
+    show: false
+    keys: [how long, how much time, take time, kitna time, kitne din, kab tak, कितना समय, कितने दिन]
+    q: {en: "How long will this take?", hi: "इसमें कितना समय लगेगा?"}
+    a:
+      en: >-
+        Many disputes end at the notice stage within a few weeks. If it goes to a commission,
+        authority or court, expect months, sometimes more. The deadline in your plan is the latest
+        you can start, not how long it will take.
+      hi: >-
+        कई विवाद नोटिस के चरण पर कुछ हफ़्तों में ख़त्म हो जाते हैं। मामला आयोग, प्राधिकरण या अदालत में जाए तो
+        महीनों का समय मानें, कभी ज़्यादा। आपकी योजना की समय सीमा शुरू करने की आख़िरी तारीख़ है, लगने वाला
+        समय नहीं।
+
+  - id: interest
+    for: [deposit, refund, salary]
+    show: false
+    keys: [interest, compensation, extra money, harassment, mental agony, damages for, byaj, ब्याज, मुआवज़ा, मुआवजा]
+    q: {en: "Can I claim interest or compensation?", hi: "क्या ब्याज या मुआवज़ा माँग सकते हैं?"}
+    a:
+      en: >-
+        You can ask for interest and costs in your notice. A consumer commission can also award
+        compensation for harassment on top of a refund. For a deposit or salary, interest is up to
+        the forum, so ask for it but treat the main amount as your real goal.
+      hi: >-
+        नोटिस में ब्याज और ख़र्च माँग सकते हैं। उपभोक्ता आयोग रिफंड के ऊपर परेशानी का मुआवज़ा भी दे सकता है।
+        डिपॉज़िट या वेतन में ब्याज मंच पर निर्भर है, इसलिए माँगें ज़रूर, पर असली लक्ष्य मूल रकम को मानें।
+
+  - id: noproof
+    for: [deposit, refund, salary]
+    show: false
+    keys: [no proof, no agreement, no receipt, nothing in writing, verbal, oral, paid in cash, cash, lost the, don't have proof, dont have proof, saboot nahi, सबूत नहीं]
+    q: {en: "What if I don't have proper proof?", hi: "अगर मेरे पास पक्का सबूत न हो तो?"}
+    a:
+      en: >-
+        You can still act. Bank or UPI records, WhatsApp chats, emails, photos and witnesses all
+        count. If you paid in cash, a message where they acknowledge the payment helps a lot. Gather
+        whatever exists before sending the notice, and never make anything up.
+      hi: >-
+        फिर भी कदम उठा सकते हैं। बैंक या UPI रिकॉर्ड, व्हाट्सएप चैट, ईमेल, फ़ोटो और गवाह सब मायने रखते हैं।
+        नकद दिया हो तो ऐसा कोई मैसेज बहुत काम आता है जिसमें उन्होंने पैसा मिलना माना हो। नोटिस से पहले जो भी
+        है इकट्ठा करें, और कुछ भी गढ़ें नहीं।
+
+  - id: dep_deductions
+    for: [deposit]
+    show: true
+    keys: [painting, painting charges, cleaning charges, cut, paint, repaint, cleaning, deduct, deducted, deduction, deductions, wear and tear, repair, repairs, damage, damages, kat liya, katoti, कटौती]
+    q: {en: "He says he deducted painting and repairs. Is that allowed?", hi: "मकान मालिक पेंटिंग और मरम्मत का पैसा काट रहा है, क्या यह सही है?"}
+    a:
+      en: >-
+        Only for real damage beyond normal wear and tear, and only what he can back with bills.
+        Repainting after an ordinary stay is usually wear and tear. Ask in writing for an itemised
+        list with bills and photos, and dispute anything that is not reasonable.
+      hi: >-
+        सिर्फ़ सामान्य घिसावट से ज़्यादा असली नुकसान के लिए, और उतना ही जितने का बिल वह दिखा सके। सामान्य रहने
+        के बाद दोबारा पेंट करना आमतौर पर घिसावट मानी जाती है। लिखित में बिल और फ़ोटो के साथ पूरी सूची माँगें,
+        और जो ठीक न लगे उस पर आपत्ति करें।
+
+  - id: dep_adjust
+    for: [deposit]
+    show: false
+    keys: [adjust, last month rent, last month's rent, don't pay rent, stop paying, rent instead, last rent]
+    q: {en: "Can I just adjust the deposit against my last month's rent?", hi: "क्या आख़िरी महीने का किराया डिपॉज़िट से एडजस्ट कर सकते हैं?"}
+    a:
+      en: >-
+        Many tenants do, and many landlords agree, but do it only with agreement in writing. A
+        message is enough. Simply stopping rent without agreement can be treated as unpaid rent and
+        weakens your position.
+      hi: >-
+        कई किरायेदार ऐसा करते हैं और कई मकान मालिक मान भी जाते हैं, पर सिर्फ़ लिखित सहमति के साथ करें। एक मैसेज
+        काफ़ी है। बिना सहमति के किराया रोकना बकाया किराया माना जा सकता है और आपकी स्थिति कमज़ोर करता है।
+
+  - id: dep_consumer
+    for: [deposit]
+    show: true
+    keys: [consumer court, consumer forum, consumer commission, consumer complaint, उपभोक्ता]
+    q: {en: "Can I go to consumer court for my deposit?", hi: "क्या डिपॉज़िट के लिए उपभोक्ता अदालत जा सकते हैं?"}
+    a:
+      en: >-
+        Usually not. Renting a home is generally not treated as a paid service, so a deposit
+        dispute goes to the Rent Authority if your State has one, or to a civil court.
+      hi: >-
+        आमतौर पर नहीं। घर किराए पर लेना आमतौर पर सेवा नहीं माना जाता, इसलिए डिपॉज़िट का विवाद आपके राज्य में
+        रेंट अथॉरिटी हो तो वहाँ, नहीं तो सिविल कोर्ट में जाता है।
+
+  - id: dep_noagreement
+    for: [deposit]
+    show: false
+    keys: [no agreement, no rent agreement, without agreement, didn't sign, never signed, एग्रीमेंट नहीं]
+    q: {en: "We never signed a rent agreement. Can I still claim?", hi: "हमने कभी एग्रीमेंट नहीं किया था, क्या फिर भी दावा कर सकते हैं?"}
+    a:
+      en: >-
+        Yes. What matters most is proof that you paid the deposit: a bank or UPI transfer, a
+        receipt, or messages. Without an agreement, the notice period and deductions are argued from
+        what was said and done, so keep every message.
+      hi: >-
+        हाँ। सबसे ज़रूरी है डिपॉज़िट देने का सबूत: बैंक या UPI ट्रांसफ़र, रसीद या मैसेज। एग्रीमेंट न हो तो नोटिस
+        पीरियड और कटौती की बात हुई बातचीत और व्यवहार से तय होती है, इसलिए हर मैसेज संभाल कर रखें।
+
+  - id: dep_later
+    for: [deposit]
+    show: false
+    keys: [pay later, no money, new tenant, next tenant, when he gets, instalment, installment, baad me, बाद में]
+    q: {en: "He says he will pay once the next tenant comes. Should I wait?", hi: "मकान मालिक कहता है नया किरायेदार आने पर देगा, क्या रुकूँ?"}
+    a:
+      en: >-
+        Your deposit is not tied to his finances or his next tenant. If you are willing to wait, get
+        the date and amount in writing. Otherwise send the notice now. It does not stop you from
+        settling later.
+      hi: >-
+        आपका डिपॉज़िट उसके पैसों या अगले किरायेदार से जुड़ा नहीं है। रुकना चाहें तो तारीख़ और रकम लिखित में
+        लें। नहीं तो अभी नोटिस भेजें। इससे बाद में समझौते का रास्ता बंद नहीं होता।
+
+  - id: ref_window
+    for: [refund]
+    show: true
+    keys: [return window, 7 days, 10 days, return period, return policy, policy, no return, non returnable]
+    q: {en: "The return window is over. Do I still have a case?", hi: "रिटर्न का समय निकल गया है, क्या फिर भी मामला बनता है?"}
+    a:
+      en: >-
+        Yes, if the product was defective or the service fell short. A return window is the
+        seller's own policy and does not cancel your right to what you paid for. A warranty is a
+        separate promise on top.
+      hi: >-
+        हाँ, अगर सामान ख़राब था या सेवा कम रही। रिटर्न का समय विक्रेता की अपनी नीति है, यह आपके हक़ को ख़त्म नहीं
+        करता। वारंटी उसके ऊपर अलग वादा है।
+
+  - id: ref_who
+    for: [refund]
+    show: false
+    keys: [platform, amazon, flipkart, marketplace, seller or, manufacturer, brand, who do i complain, whom]
+    q: {en: "Do I complain against the seller or the website?", hi: "शिकायत विक्रेता के ख़िलाफ़ करूँ या वेबसाइट के?"}
+    a:
+      en: >-
+        Name everyone involved: the seller you bought from, the platform that took your payment, and
+        the manufacturer if it is a warranty problem. The commission can decide who is responsible.
+      hi: >-
+        सबको शामिल करें: जिस विक्रेता से ख़रीदा, जिस प्लेटफ़ॉर्म ने पैसा लिया, और वारंटी का मामला हो तो निर्माता को
+        भी। ज़िम्मेदार कौन है, यह आयोग तय कर सकता है।
+
+  - id: ref_bank
+    for: [refund]
+    show: false
+    keys: [chargeback, credit card, debit card, bank dispute, paid by card, gpay, phonepe, paytm, upi]
+    q: {en: "I paid by card or UPI. Can the bank help?", hi: "मैंने कार्ड या UPI से पैसे दिए थे, क्या बैंक मदद कर सकता है?"}
+    a:
+      en: >-
+        If you paid by card, ask your bank about raising a dispute on the transaction. For UPI, raise
+        a complaint inside the payment app first. This runs alongside the consumer complaint, not
+        instead of it.
+      hi: >-
+        कार्ड से दिया हो तो बैंक से ट्रांज़ैक्शन पर विवाद दर्ज करने के बारे में पूछें। UPI हो तो पहले पेमेंट ऐप में ही
+        शिकायत करें। यह उपभोक्ता शिकायत के साथ चलता है, उसकी जगह नहीं।
+
+  - id: ref_edaakhil
+    for: [refund]
+    show: true
+    keys: [e-daakhil, edaakhil, how to file, file a complaint, file the complaint, district commission, consumer court, consumer commission]
+    q: {en: "How do I file a complaint on e-Daakhil?", hi: "ई-दाखिल पर शिकायत कैसे करूँ?"}
+    a:
+      en: >-
+        Go to edaakhil.nic.in and register with your email and phone. Choose your District
+        Commission, fill in the details, upload the complaint (the draft is in the Documents tab),
+        your proof and an affidavit, pay the fee online if any, and submit. You can track it there.
+      hi: >-
+        edaakhil.nic.in पर जाकर ईमेल और फ़ोन से रजिस्टर करें। अपना ज़िला आयोग चुनें, जानकारी भरें, शिकायत (ड्राफ़्ट
+        डॉक्यूमेंट्स टैब में है), सबूत और हलफ़नामा अपलोड करें, कोई फ़ीस हो तो ऑनलाइन भरें, और सबमिट करें। स्थिति
+        वहीं देख सकते हैं।
+
+  - id: ref_service
+    for: [refund]
+    show: false
+    keys: [flight, airline, hotel, booking, cancelled, service center, mechanic, coaching, course, gym, internet, broadband]
+    q: {en: "It was a service, not a product. Does this still apply?", hi: "यह सामान नहीं, सेवा थी। क्या फिर भी यही लागू है?"}
+    a:
+      en: >-
+        Yes. A cancelled flight with no refund, a hotel that did not honour a booking, or a repair
+        that made things worse are all deficiencies in service. The same route applies: a written
+        complaint, the consumer helpline, then the District Commission.
+      hi: >-
+        हाँ। बिना रिफंड के रद्द फ़्लाइट, बुकिंग न मानने वाला होटल, या ऐसी मरम्मत जिससे चीज़ और बिगड़ गई, ये सब सेवा
+        में कमी है। रास्ता वही है: लिखित शिकायत, उपभोक्ता हेल्पलाइन, फिर ज़िला आयोग।
+
+  - id: sal_clearance
+    for: [salary]
+    show: true
+    keys: [relieving letter, experience letter, withhold, withholding, clearance, no dues, laptop, handover]
+    q: {en: "They are holding my salary until clearance. Can they?", hi: "क्लीयरेंस तक सैलरी रोकी है, क्या वे ऐसा कर सकते हैं?"}
+    a:
+      en: >-
+        Earned salary cannot be held back over clearance. Ask in writing what is pending from your
+        side and finish what is reasonable, like returning a laptop, keeping proof that you did. For
+        a relieving or experience letter, ask in writing and keep the reply.
+      hi: >-
+        कमाया हुआ वेतन क्लीयरेंस के नाम पर नहीं रोका जा सकता। लिखित में पूछें कि आपकी ओर से क्या बाकी है, और जो
+        ठीक हो जैसे लैपटॉप लौटाना, वह पूरा करें और उसका सबूत रखें। रिलीविंग या एक्सपीरियंस लेटर लिखित में माँगें
+        और जवाब संभालें।
+
+  - id: sal_notice
+    for: [salary]
+    show: true
+    keys: [noticeperiod, notice period, buyout, didn't serve, did not serve, short notice, notice pay]
+    q: {en: "I did not serve my full notice period. Can they keep everything?", hi: "मैंने पूरा नोटिस पीरियड नहीं किया, क्या वे सब रख सकते हैं?"}
+    a:
+      en: >-
+        No. They can usually adjust the shortfall the way your contract says, which is a
+        calculation, not a reason to hold everything. Ask for the breakup in writing.
+      hi: >-
+        नहीं। आमतौर पर वे कॉन्ट्रैक्ट के हिसाब से कमी का पैसा काट सकते हैं, जो एक हिसाब है, सब कुछ रोकने का कारण
+        नहीं। लिखित में पूरा हिसाब माँगें।
+
+  - id: sal_intern
+    for: [salary]
+    show: false
+    keys: [intern, internship, stipend, freelance, freelancer, contract basis, consultant, gig, invoice]
+    q: {en: "I was an intern or freelancer. Does this apply to me?", hi: "मैं इंटर्न या फ़्रीलांसर था, क्या यह मुझ पर लागू है?"}
+    a:
+      en: >-
+        It depends on whether you count as an employee. Interns and freelancers are often treated
+        differently, and a freelancer's unpaid invoice is usually a contract dispute for a civil
+        court rather than a wage claim. The written demand works the same way, so start there, and
+        ask 15100 which forum fits for a larger amount.
+      hi: >-
+        यह इस पर निर्भर है कि आप कर्मचारी माने जाते हैं या नहीं। इंटर्न और फ़्रीलांसर अक्सर अलग माने जाते हैं, और
+        फ़्रीलांसर का बकाया बिल आमतौर पर वेतन दावा नहीं, सिविल कोर्ट का कॉन्ट्रैक्ट विवाद होता है। लिखित माँग वैसे
+        ही काम करती है, वहीं से शुरू करें, और बड़ी रकम हो तो 15100 से सही मंच पूछें।
+
+  - id: sal_closed
+    for: [salary]
+    show: false
+    keys: [shut down, shutdown, closed down, insolvency, bankrupt, startup closed, company closed]
+    q: {en: "The company has shut down. What now?", hi: "कंपनी बंद हो गई है, अब क्या करें?"}
+    a:
+      en: >-
+        Recovery gets harder and follows a different process if the company is in insolvency, with
+        its own claim deadlines. Send the demand anyway and speak to a lawyer or 15100 quickly.
+      hi: >-
+        कंपनी दिवालिया प्रक्रिया में हो तो वसूली मुश्किल हो जाती है और अलग प्रक्रिया व अलग समय सीमा होती है। फिर भी
+        माँग भेजें और जल्दी किसी वकील या 15100 से बात करें।
+
+  - id: sal_pf
+    for: [salary]
+    show: false
+    keys: [pf, provident fund, epf, gratuity]
+    q: {en: "What about my PF and gratuity?", hi: "मेरे PF और ग्रेच्युटी का क्या?"}
+    a:
+      en: >-
+        PF and gratuity fall under separate laws that this tool does not hold. For PF, raise a
+        grievance with the EPFO. For gratuity, ask the company in writing first, then approach the
+        labour department. Call 15100 if they refuse.
+      hi: >-
+        PF और ग्रेच्युटी अलग कानूनों में आते हैं जो इस टूल में नहीं हैं। PF के लिए EPFO में शिकायत करें। ग्रेच्युटी के
+        लिए पहले कंपनी से लिखित में माँगें, फिर श्रम विभाग जाएँ। मना करें तो 15100 पर कॉल करें।
+
+  - id: not_myself
+    for: [notice]
+    show: true
+    keys: [reply myself, write the reply, reply on my own, how to reply, how do i reply, what should i reply, jawab kaise]
+    q: {en: "Can I reply to the notice myself?", hi: "क्या मैं नोटिस का जवाब ख़ुद दे सकता हूँ?"}
+    a:
+      en: >-
+        For a simple money dispute, yes. Keep it calm and factual, deny what is wrong point by point,
+        and send it before the deadline. The draft in the Documents tab is a starting point. If it
+        involves a cheque, property, the police or a court case, get a lawyer to write it.
+      hi: >-
+        साधारण पैसों के विवाद में हाँ। शांत और तथ्यों पर रहें, जो ग़लत है उसका हर बिंदु पर खंडन करें, और समय सीमा
+        से पहले भेजें। डॉक्यूमेंट्स टैब का ड्राफ़्ट शुरुआत के लिए है। चेक, प्रॉपर्टी, पुलिस या केस से जुड़ा हो तो वकील
+        से लिखवाएँ।
+
+  - id: not_ignore
+    for: [notice]
+    show: true
+    keys: [ignore the notice, ignore it, don't reply, do not reply, not reply, what happens if, if i ignore]
+    q: {en: "What happens if I ignore it?", hi: "अगर मैं इसे नज़रअंदाज़ करूँ तो क्या होगा?"}
+    a:
+      en: >-
+        Nothing happens automatically. But they can file a case and show the court you never
+        disputed the claim. A short written reply on record protects you.
+      hi: >-
+        अपने आप कुछ नहीं होता। पर वे केस कर सकते हैं और अदालत को दिखा सकते हैं कि आपने कभी दावे का विरोध नहीं
+        किया। एक छोटा लिखित जवाब रिकॉर्ड पर रहने से आप सुरक्षित रहते हैं।
+
+  - id: not_late
+    for: [notice]
+    show: false
+    keys: [deadline passed, deadline is over, missed the deadline, late, expired, after 15 days, time is over]
+    q: {en: "The deadline in the notice has passed. Is it too late?", hi: "नोटिस की समय सीमा निकल गई, क्या अब देर हो गई?"}
+    a:
+      en: >-
+        Reply anyway, as soon as you can. A late reply is far better than none. If court papers
+        arrive, see a lawyer at once.
+      hi: >-
+        फिर भी जितनी जल्दी हो सके जवाब दें। देर से जवाब, बिल्कुल न देने से कहीं बेहतर है। अदालत के काग़ज़ आएँ तो
+        तुरंत वकील से मिलें।
+
+  - id: not_owe
+    for: [notice]
+    show: false
+    keys: [don't owe, do not owe, "false", fake claim, not true, wrong amount, lie, lying, jhooth, झूठ]
+    q: {en: "I don't owe them this money. What do I do?", hi: "मुझ पर यह पैसा बकाया नहीं है, क्या करूँ?"}
+    a:
+      en: >-
+        Say so clearly in your reply, point by point, and mention your proof. Do not pay just to make
+        it go away unless you have thought it through. If they go to court, they still have to prove
+        their claim.
+      hi: >-
+        जवाब में हर बिंदु पर साफ़ लिखें और अपने सबूत का ज़िक्र करें। सिर्फ़ मामला ख़त्म करने के लिए बिना सोचे पैसा न
+        दें। अदालत जाने पर भी दावा उन्हें ही साबित करना होगा।
